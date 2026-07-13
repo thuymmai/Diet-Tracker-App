@@ -10,6 +10,15 @@
     android:gravity="center"
     tools:context=".MainActivity">
 
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="148dp"
+        android:layout_height="167dp"
+        app:srcCompat="@drawable/duck_wave1"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="471dp" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
