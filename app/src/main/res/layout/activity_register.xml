@@ -9,8 +9,7 @@
     android:background="#f4cca5"
     android:padding="16dp"
     android:gravity="center"
-    tools:context=".MainActivity">
-
+    tools:context=".Register">
 
     <ImageView
         android:id="@+id/imageView"
@@ -19,17 +18,15 @@
         app:srcCompat="@drawable/duck_wave1"
         tools:layout_editor_absoluteX="144dp"
         tools:layout_editor_absoluteY="471dp" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to Diet Tracker"
+        android:text="Create new account"
         android:textSize="32dp"
         android:textStyle="bold"
         android:textColor="#0b335a"
         android:paddingBottom="40dp"/>
-    
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
@@ -43,26 +40,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:padding="16dp"/>
 
-    <TextView
-        android:id="@+id/txtmessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Message"
-        android:textColor="#0b335a"
-        android:textSize="15dp"
-        android:layout_marginVertical="10dp"/>
-
-
-    <Button
-        android:id="@+id/buttonlogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:backgroundTint="#0b335a"
-        android:text="@string/login" />
     <Button
         android:id="@+id/buttonregister"
         android:layout_width="wrap_content"
@@ -70,5 +50,6 @@
         android:layout_margin="20dp"
         android:backgroundTint="#0b335a"
         android:text="Register" />
+
 
 </LinearLayout>
