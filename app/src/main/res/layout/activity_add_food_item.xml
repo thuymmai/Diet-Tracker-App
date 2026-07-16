@@ -7,4 +7,18 @@
     android:layout_height="match_parent"
     tools:context=".AddFoodItem">
 
+    <TableRow
+        android:layout_width="265dp"
+        android:layout_height="516dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="hello world" />
+    </TableRow>
 </androidx.constraintlayout.widget.ConstraintLayout>
