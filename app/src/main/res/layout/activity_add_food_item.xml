@@ -5,20 +5,44 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".AddFoodItem">
 
-    <TableRow
-        android:layout_width="265dp"
-        android:layout_height="516dp"
+
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="701dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/editText_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Add a food item">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save">
+
+        </Button>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textView_Result"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:text="hello world" />
-    </TableRow>
+            android:layout_height="wrap_content"
+            android:text="Food item(s) here"
+            android:textSize="20sp">
+
+        </TextView>
+
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
