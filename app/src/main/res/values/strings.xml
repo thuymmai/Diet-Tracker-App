@@ -2,4 +2,6 @@
     <string name="app_name">DietTracker</string>
     <string name="send">Send</string>
     <string name="login">Login</string>
+    <string name="button_view_meal">View Meal</string>
+    <string name="button_view_food_item">View Food Item</string>
 </resources>

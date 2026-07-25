@@ -1,12 +1,9 @@
 package com.example.diettracker;
 
 import android.os.Bundle;
+import android.widget.EditText;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -17,4 +14,11 @@ public class HomeActivity extends AppCompatActivity {
 
 
     }
+
+    EditText simpleEditText = (EditText) findViewById(R.id.userInput);
+
+    String strValue = simpleEditText.getText().toString();
+
+    //convert it to integer type for calculations
+    int number = Integer.parseInt(strValue);
 }
