@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DietTracker">
         <activity
-            android:name=".MainActivity"
+            android:name=".WelcomeActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>

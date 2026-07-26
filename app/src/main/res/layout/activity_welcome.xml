@@ -9,7 +9,7 @@
     android:background="#f4cca5"
     android:padding="16dp"
     android:gravity="center"
-    tools:context=".MainActivity">
+    tools:context=".WelcomeActivity">
 
 
     <ImageView

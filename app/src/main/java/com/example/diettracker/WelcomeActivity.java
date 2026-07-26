@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class WelcomeActivity extends AppCompatActivity {
 
     EditText username, password;
     Button buttonLogin, buttonRegister;
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_welcome);
 
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Register.class);
+                Intent intent = new Intent(WelcomeActivity.this, Register.class);
                 startActivity(intent);
             }
         });
@@ -63,11 +63,11 @@ public class MainActivity extends AppCompatActivity {
 
             message.setVisibility(View.GONE);
 
-            Toast.makeText(MainActivity.this,
+            Toast.makeText(WelcomeActivity.this,
                     "Login Successful!",
                     Toast.LENGTH_SHORT).show();
 
-            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+            Intent intent = new Intent(WelcomeActivity.this, HomeActivity.class);
             startActivity(intent);
             finish();
 
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             message.setVisibility(View.VISIBLE);
             message.setText("Login Failed! Try again or click on Register");
 
-            Toast.makeText(MainActivity.this,
+            Toast.makeText(WelcomeActivity.this,
                     "Invalid Username or Password.",
                     Toast.LENGTH_SHORT).show();
         }

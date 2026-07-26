@@ -43,7 +43,7 @@ public class Register extends AppCompatActivity {
                         "Registration Successful",
                         Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(Register.this, MainActivity.class);
+                Intent intent = new Intent(Register.this, WelcomeActivity.class);
                 startActivity(intent);
                 finish();
             }
