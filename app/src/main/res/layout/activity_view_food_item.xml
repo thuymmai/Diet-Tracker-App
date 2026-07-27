@@ -9,15 +9,22 @@
     tools:context=".ViewFoodItem">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
-        app:subtitle="Implementation"
+        android:paddingTop="40dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/baseline_arrow_back_24"
+        app:navigationIconTint="?attr/colorOnPrimary"
+        app:subtitle=" Diet Tracker"
         app:subtitleTextColor="?attr/colorOnPrimary"
         app:title="View Food Item"
-        app:titleTextColor="?attr/colorOnPrimary"
-        app:navigationIcon="@drawable/baseline_arrow_back_24">
+        app:titleTextColor="?attr/colorOnPrimary">
 
     </com.google.android.material.appbar.MaterialToolbar>
 
