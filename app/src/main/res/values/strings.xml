@@ -4,5 +4,10 @@
     <string name="login">Login</string>
     <string name="button_view_meal">View Meal</string>
     <string name="button_view_food_item">View Food Item</string>
-    <string name="total_calorie_text">Total calorie:</string>
+    <string name="total_calorie_text">Total calorie: </string>
+    <string name="total_calorie_viewmeal">Total calorie: </string>
+    <string name="button_dinner">Dinner</string>
+    <string name="button_lunch">Lunch</string>
+    <string name="button_breakfast">Breakfast</string>
+    <string name="button_own_option">Enter your own option</string>
 </resources>
