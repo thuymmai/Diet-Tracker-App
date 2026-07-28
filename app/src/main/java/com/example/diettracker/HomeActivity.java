@@ -10,25 +10,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private Button button;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        Button goToViewMeal = findViewById(R.id.buttonViewMeal);
 
-        button = (Button) findViewById(R.id.buttonViewMeal);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                openViewFoodItem();
-            }
+        goToViewMeal.setOnClickListener(view -> {
+           Intent intent = new Intent(getApplicationContext(), ViewFoodItem.class);
+           startActivity(intent);
         });
-    }
-
-    public void openViewFoodItem() {
-        Intent intent = new Intent(this, ViewFoodItem.class);
-        startActivity(intent);
     }
 }

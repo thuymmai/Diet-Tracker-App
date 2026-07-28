@@ -28,6 +28,7 @@
         <activity
             android:name=".ViewFoodItem"
             android:exported="false"
+            android:parentActivityName=".HomeActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Register"
