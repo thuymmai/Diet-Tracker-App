@@ -41,6 +41,7 @@
         <activity
             android:name=".ViewMeal"
             android:exported="false"
+            android:parentActivityName=".HomeActivity"
             android:windowSoftInputMode="adjustResize" />
     </application>
 

@@ -29,5 +29,11 @@ public class HomeActivity extends AppCompatActivity {
         buttonViewMeal.setOnClickListener(v -> {
             // For now, it could also go to ViewFoodItem or another activity
         });
+
+        Button buttonViewMeal = findViewById(R.id.buttonViewMeal);
+        buttonViewMeal.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), ViewMeal.class);
+            startActivity(intent);
+        });
     }
 }
