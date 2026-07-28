@@ -1,34 +1,66 @@
 package com.example.diettracker;
 
-import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
-import androidx.activity.SystemBarStyle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import com.google.android.material.appbar.MaterialToolbar;
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class ViewFoodItem extends AppCompatActivity {
 
-    
+    EditText etProtein, etRice, etVegetable, etFruit;
+    Button btnSave;
+    Button btnBack;
+    TextView tvResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this, SystemBarStyle.dark(1));
         setContentView(R.layout.activity_view_food_item);
 
-        MaterialToolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        etProtein = findViewById(R.id.etProtein);
+        etRice = findViewById(R.id.etRice);
+        etVegetable = findViewById(R.id.etVegetable);
+        etFruit = findViewById(R.id.etFruit);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, 0, systemBars.right, systemBars.bottom);
-            return insets;
+        btnSave = findViewById(R.id.btnSave);
+        btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(v -> {
+            Intent intent = new Intent(ViewFoodItem.this, HomeActivity.class);
+            startActivity(intent);
+            finish();
+        });
+        tvResult = findViewById(R.id.tvResult);
+
+        btnSave.setOnClickListener(v -> {
+            Toast.makeText(ViewFoodItem.this,
+                    "Data saved successfully!",
+                    Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(ViewFoodItem.this, HomeActivity.class);
+            startActivity(intent);
+            finish();
+            String protein = etProtein.getText().toString();
+            String rice = etRice.getText().toString();
+            String vegetable = etVegetable.getText().toString();
+            String fruit = etFruit.getText().toString();
+
+            if(protein.isEmpty()) protein = "0";
+            if(rice.isEmpty()) rice = "0";
+            if(vegetable.isEmpty()) vegetable = "0";
+            if(fruit.isEmpty()) fruit = "0";
+
+            String result =
+                    "Today's Intake\n\n" +
+                            "Protein: " + protein + " servings\n" +
+                            "Rice: " + rice + " cups\n" +
+                            "Vegetables: " + vegetable + " servings\n" +
+                            "Fruit: " + fruit + " servings";
+
+            tvResult.setText(result);
+
         });
     }
 }

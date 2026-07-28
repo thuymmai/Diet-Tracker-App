@@ -1,24 +1,33 @@
 package com.example.diettracker;
 
+import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-
-
-import androidx.appcompat.app.AppCompatActivity;
+import android.widget.EditText;
 
 public class HomeActivity extends AppCompatActivity {
+
+    EditText userInput;
+    Button buttonViewFoodItem, buttonViewMeal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        Button goToViewMeal = findViewById(R.id.buttonViewMeal);
 
-        goToViewMeal.setOnClickListener(view -> {
-           Intent intent = new Intent(getApplicationContext(), ViewFoodItem.class);
-           startActivity(intent);
+        userInput = findViewById(R.id.userInput);
+        buttonViewFoodItem = findViewById(R.id.buttonViewFoodItem);
+        buttonViewMeal = findViewById(R.id.buttonViewMeal);
+
+        buttonViewFoodItem.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, ViewFoodItem.class);
+            startActivity(intent);
+        });
+
+        // Placeholder for buttonViewMeal if needed
+        buttonViewMeal.setOnClickListener(v -> {
+            // For now, it could also go to ViewFoodItem or another activity
         });
     }
 }
