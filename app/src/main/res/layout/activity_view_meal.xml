@@ -7,6 +7,23 @@
     android:layout_height="match_parent"
     tools:context=".ViewMeal">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:paddingTop="40dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIconTint="?attr/colorOnPrimary"
+        app:title="View Meal"
+        app:titleTextColor="?attr/colorOnPrimary">
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
