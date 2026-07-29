@@ -18,7 +18,7 @@ public class HomeActivity extends AppCompatActivity {
 
         userInput = findViewById(R.id.userInput);
         buttonViewFoodItem = findViewById(R.id.buttonViewFoodItem);
-        buttonViewMeal = findViewById(R.id.buttonViewMeal);
+        //buttonViewMeal = findViewById(R.id.buttonViewMeal);
 
         buttonViewFoodItem.setOnClickListener(v -> {
             Intent intent = new Intent(HomeActivity.this, ViewFoodItem.class);
@@ -26,9 +26,11 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         // Placeholder for buttonViewMeal if needed
-        buttonViewMeal.setOnClickListener(v -> {
-            // For now, it could also go to ViewFoodItem or another activity
-        });
+//        buttonViewMeal.setOnClickListener(v -> {
+//            // For now, it could also go to ViewFoodItem or another activity
+//            Intent intent = new Intent(HomeActivity.this, ViewMeal.class);
+//            startActivity(intent);
+//        });
 
         Button buttonViewMeal = findViewById(R.id.buttonViewMeal);
         buttonViewMeal.setOnClickListener(view -> {
