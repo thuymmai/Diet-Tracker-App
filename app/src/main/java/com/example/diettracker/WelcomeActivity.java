@@ -67,7 +67,7 @@ public class WelcomeActivity extends AppCompatActivity {
                     "Login Successful!",
                     Toast.LENGTH_SHORT).show();
 
-            Intent intent = new Intent(WelcomeActivity.this, ViewFoodItem.class);
+            Intent intent = new Intent(WelcomeActivity.this, HomeActivity.class);
             startActivity(intent);
             finish();
 

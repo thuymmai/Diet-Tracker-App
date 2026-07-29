@@ -10,6 +10,8 @@ public class HomeActivity extends AppCompatActivity {
 
     EditText userInput;
     Button buttonViewFoodItem, buttonViewMeal;
+    Button btnBack;
+    Button btnQuit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,21 +21,26 @@ public class HomeActivity extends AppCompatActivity {
         userInput = findViewById(R.id.userInput);
         buttonViewFoodItem = findViewById(R.id.buttonViewFoodItem);
         buttonViewMeal = findViewById(R.id.buttonViewMeal);
+        btnBack = findViewById(R.id.btnBack);
+        btnQuit = findViewById(R.id.btnQuit);
 
         buttonViewFoodItem.setOnClickListener(v -> {
-            Intent intent = new Intent(HomeActivity.this, ViewFoodItem.class);
+            Intent intent = new Intent(HomeActivity.this, ViewCategory.class);
             startActivity(intent);
         });
 
-        // Placeholder for buttonViewMeal if needed
         buttonViewMeal.setOnClickListener(v -> {
-            // For now, it could also go to ViewFoodItem or another activity
+            Intent intent = new Intent(HomeActivity.this, ViewMeal.class);
+            startActivity(intent);
         });
 
-        Button buttonViewMeal = findViewById(R.id.buttonViewMeal);
-        buttonViewMeal.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), ViewMeal.class);
+        btnBack.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, Register.class);
             startActivity(intent);
+        });
+
+        btnQuit.setOnClickListener(v -> {
+            finishAffinity();  // close app
         });
     }
 }

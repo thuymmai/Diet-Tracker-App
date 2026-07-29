@@ -1,120 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewMeal">
+    android:orientation="vertical"
+    android:padding="20dp">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar"
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today's Meals"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+
+    <EditText
+        android:id="@+id/etBurger"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:paddingTop="40dp"
-        android:paddingBottom="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navigationIconTint="?attr/colorOnPrimary"
-        app:title="View Meal"
-        app:titleTextColor="?attr/colorOnPrimary">
-
-    </com.google.android.material.appbar.MaterialToolbar>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="387dp"
-        android:layout_height="596dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
-
-        <TextView
-            android:id="@+id/total_calorie_view_meal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/total_calorie_viewmeal"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/editTextNumberSigned"
-            app:layout_constraintHorizontal_bias="0.842"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.065" />
-
-        <EditText
-            android:id="@+id/editTextNumberSigned"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:ems="10"
-            android:inputType="numberSigned"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.029" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonBreakfast"
-            android:layout_width="355dp"
-            android:layout_height="42dp"
-            android:text="@string/button_breakfast"
-            app:cornerRadius="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.193">
-
-        </com.google.android.material.button.MaterialButton>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonLunch"
-            android:layout_width="355dp"
-            android:layout_height="42dp"
-            android:text="@string/button_lunch"
-            app:cornerRadius="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonBreakfast"
-            app:layout_constraintVertical_bias="0.039">
-
-        </com.google.android.material.button.MaterialButton>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonDinner"
-            android:layout_width="355dp"
-            android:layout_height="42dp"
-            android:text="@string/button_dinner"
-            app:cornerRadius="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonLunch"
-            app:layout_constraintVertical_bias="0.054">
-
-        </com.google.android.material.button.MaterialButton>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonOwnOption"
-            android:layout_width="355dp"
-            android:layout_height="42dp"
-            android:text="@string/button_own_option"
-            app:cornerRadius="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonDinner"
-            app:layout_constraintVertical_bias="0.054">
-
-        </com.google.android.material.button.MaterialButton>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        android:hint="Burger servings"
+        android:inputType="number"/>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/etSoup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Soup servings"
+        android:inputType="number"/>
+
+
+    <EditText
+        android:id="@+id/etFriedRice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fried Rice servings"
+        android:inputType="number"/>
+
+
+    <EditText
+        android:id="@+id/etNoodle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Noodle servings"
+        android:inputType="number"/>
+
+
+    <EditText
+        android:id="@+id/etPizza"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pizza servings"
+        android:inputType="number"/>
+
+
+    <EditText
+        android:id="@+id/etSalad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Salad servings"
+        android:inputType="number"/>
+
+
+    <EditText
+        android:id="@+id/etChicken"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fried Chicken servings"
+        android:inputType="number"/>
+
+
+
+
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Calories: 0 kcal"
+        android:textSize="20sp"/>
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Back" />
+
+</LinearLayout>

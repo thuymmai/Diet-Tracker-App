@@ -29,7 +29,7 @@
         android:textStyle="bold"
         android:textColor="#0b335a"
         android:paddingBottom="40dp"/>
-    
+
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
