@@ -23,7 +23,7 @@ public class ViewMeal extends AppCompatActivity {
         setContentView(R.layout.activity_view_meal);
 
 
-        etBurger = findViewById(R.id.etBurger);
+        etBurger = findViewById(R.id.et);
         etSoup = findViewById(R.id.etSoup);
         etFriedRice = findViewById(R.id.etFriedRice);
         etNoodle = findViewById(R.id.etNoodle);
