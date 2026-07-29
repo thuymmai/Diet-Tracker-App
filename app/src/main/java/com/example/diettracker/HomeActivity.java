@@ -32,7 +32,7 @@ public class HomeActivity extends AppCompatActivity {
 //            startActivity(intent);
 //        });
 
-        Button buttonViewMeal = findViewById(R.id.buttonViewMeal);
+        buttonViewMeal = findViewById(R.id.buttonViewMeal);
         buttonViewMeal.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(), ViewMeal.class);
             startActivity(intent);
