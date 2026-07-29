@@ -9,5 +9,5 @@
     <string name="button_dinner">Dinner</string>
     <string name="button_lunch">Lunch</string>
     <string name="button_breakfast">Breakfast</string>
-    <string name="button_own_option">Enter your own option</string>
+    <string name="button_own_option">Enter your own option...</string>
 </resources>
