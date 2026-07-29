@@ -35,13 +35,9 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".inputFood"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
             android:name=".ViewMeal"
             android:exported="false"
-            android:parentActivityName=".ViewFoodItem"
+            android:parentActivityName=".HomeActivity"
             android:windowSoftInputMode="adjustResize" />
     </application>
 
